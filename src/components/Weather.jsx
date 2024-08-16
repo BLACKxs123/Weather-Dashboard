@@ -80,3 +80,13 @@ const search = async (city) => {
     console.error("Error in fetching weather data:", error);
   }
 };
+
+const addFavorite = () => {
+    if (weatherData && !favorites.some(fav => fav.location === weatherData.location)) {
+      setFavorites([...favorites, weatherData]);
+    }
+  };
+
+  useEffect(() => {
+    search("London");
+  }, []);
