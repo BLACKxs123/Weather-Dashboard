@@ -119,8 +119,23 @@ const addFavorite = () => {
                 <img src={wind_icon} alt="Wind Icon" />
                 <div>
                   <p>{weatherData.windSpeed} Km/hr</p>
-                  <span>Wind Speed</span>
+                  <span>Wind-Speed</span>
                 </div>
               </div>
             </div>
             <button onClick={addFavorite}>Add to Favorites</button>
+
+            <div className="forecast">
+              <h2>5-Day Forecast</h2>
+              <div className="forecast-container">
+                {forecastData.map((day, index) => (
+                  <div key={index} className="forecast-day">
+                    <p>{new Date(day.dt_txt).toLocaleDateString()}</p>
+                    <img src={allIcons[day.weather[0].icon] || clear_icon} alt="Weather Icon" />
+                    <p>{Math.floor(day.main.temp)}°C</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        ) : null}
