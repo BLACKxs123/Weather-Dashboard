@@ -61,3 +61,34 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+
+  .weather-data {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .weather-data .col {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-data .col img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .weather-data .col div {
+    text-align: left;
+  }
+  
+  .weather-data .col div p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .weather-data .col div span {
+    font-size: 12px;
+    color: #777;
+  }
