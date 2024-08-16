@@ -118,7 +118,7 @@ const addFavorite = () => {
               <div className="col">
                 <img src={wind_icon} alt="Wind Icon" />
                 <div>
-                  <p>{weatherData.windSpeed} Km/h</p>
+                  <p>{weatherData.windSpeed} Km/hr</p>
                   <span>Wind Speed</span>
                 </div>
               </div>
