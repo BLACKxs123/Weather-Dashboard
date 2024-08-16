@@ -139,3 +139,43 @@ const addFavorite = () => {
             </div>
           </>
         ) : null}
+
+<div className="favorites">
+          <h2>Favorite Cities</h2>
+          {favorites.map((fav, index) => (
+            <div key={index} className="favorite-city">
+              <img src={fav.icon} alt="Weather Icon" />
+              <p className="temperature">{fav.temperature}°C</p>
+              <p className="location">{fav.location}</p>
+              <div className="weather-data">
+                <div className="col">
+                  <img src={humidity_icon} alt="Humidity Icon" />
+                  <div>
+                    <p>{fav.humidity}%</p>
+                    <span>Humidity</span>
+                  </div>
+                </div>
+                <div className="col">
+                  <img src={wind_icon} alt="Wind Icon" />
+                  <div>
+                    <p>{fav.windSpeed} Km/h</p>
+                    <span>Wind Speed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="dark-mode-toggle"
+          onClick={() => setIsDarkMode(!isDarkMode)}
+        >
+          {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Weather;
